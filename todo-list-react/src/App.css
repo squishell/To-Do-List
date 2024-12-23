@@ -1,0 +1,133 @@
+/* General Table Styles */
+.task_table {
+  border: 1px solid #78a37a;
+  width: 90vh;
+  margin: 10px auto;
+  font-family: 'Roboto', sans-serif;
+  border-collapse: collapse;
+  overflow: hidden;
+}
+
+.task_table table {
+  width: 100%; /* Ensure the table spans the container */
+  table-layout: fixed; /* Ensure consistent column widths */
+  border-collapse: collapse; /* Merge borders for a cleaner look */
+}
+
+.task_table th,
+.task_table td {
+  position: relative;
+  padding: 12px 15px;
+  text-align: left;
+  white-space: nowrap; /* Prevent text from wrapping */
+  border: 1px solid #929292;
+  font-size: 14px;
+  color: #333;
+  overflow: hidden; /* Prevent overflow */
+  text-overflow: ellipsis; /* Show ellipsis for overflow text */
+  vertical-align: middle; /* Align content in the middle vertically */
+}
+
+/* Header Styles */
+.task_table thead {
+  background-color: #78a37a;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
+  border: #333;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.task_table th {
+  text-align: center;
+  color: rgb(43, 43, 43);
+  font-weight: bold;
+  font-size: 15px;
+  border: 2px solid #333;
+}
+
+/* Column Width Adjustments */
+.task_table th:first-child,
+.task_table td:first-child {
+  width: 5%; /* Narrow column for checkboxes */
+  text-align: center; /* Center align the checkboxes */
+}
+
+.task_table th:nth-child(2),
+.task_table td:nth-child(2) {
+  width: 50%; /* Task column */
+}
+
+.task_table th:nth-child(3),
+.task_table td:nth-child(3) {
+  width: 45%; /* Due Date column */
+}
+
+/* Row Hover Effects */
+.task_table tr:hover td {
+  background-color: #c1e6c2; /* Light highlight color for the entire row */
+}
+
+.task_table td:hover {
+  background-color: #8cb98e !important; /* Darker highlight color for the hovered cell */
+  z-index: 1; /* Ensure the hovered cell appears above the row highlight */
+}
+
+/* Ensure Headers Are Not Highlighted */
+.task_table th:hover {
+  background-color: inherit; /* No hover effect for headers */
+}
+
+/* Fade-out effect for rows */
+.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/* Button Styles */
+.add_row_button {
+  background-color: #98ce9a;
+  border-radius: 100px;
+  color: rgb(49, 49, 49);
+  cursor: pointer;
+  display: inline-block;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 1px solid #333;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.add_row_button:hover {
+  transform: scale(1.05) rotate(-1deg);
+}
+
+/* Save Changes Button */
+.save_changes_button {
+  background-color: #ff6b6b;
+  border-radius: 100px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 1px solid #333;
+  font-size: 16px;
+  margin-left: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.save_changes_button:hover {
+  transform: scale(1.05);
+  background-color: #e35a5a;
+}
